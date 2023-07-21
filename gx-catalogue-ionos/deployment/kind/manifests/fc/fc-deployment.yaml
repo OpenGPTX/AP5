@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fc-service
+  labels:
+    app: fc-service
+  namespace: federated-catalogue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fc-service
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
+  template:
+    metadata:
+      labels:
+        app: fc-service
+    spec:
+      containers:
+        - name: fc-service-server-image
+          image: registry.gitlab.com/gaia-x/data-infrastructure-federation-services/cat/fc-service/fc-service-server:1.0.0
+          imagePullPolicy: Always
+          env:
+            - name: GRAPHSTORE_URI
+              value: bolt://fc-neo4j:7687
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://fc-postgres:5432/postgres
+            - name: GRAPHSTORE_QUERY_TIMEOUT_IN_SECONDS
+              value: "5"
+            - name: DATASTORE_FILE_PATH
+              value: /var/lib/fc-service/filestore
+            - name: KEYCLOAK_AUTH_SERVER_URL
+              value: http://fc-key-server-balancer-service:8080
+            - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
+              value: http://fc-key-server-balancer-service:8080/realms/gaia-x
+            - name: KEYCLOAK_CREDENTIALS_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: fc-server-keys-secret
+                  key: keycloak_client_secret
+          ports:
+            - name: http
+              containerPort: 8081
+          volumeMounts:
+            - name: fc-file-store
+              mountPath: /var/lib/fc-service
+              subPath: filestore
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8081
+            initialDelaySeconds: 60
+            periodSeconds: 30
+          resources: { }
+      # affinity:
+      #   podAntiAffinity:
+      #     preferredDuringSchedulingIgnoredDuringExecution:
+      #       - weight: 100
+      #         podAffinityTerm:
+      #           labelSelector:
+      #             matchExpressions:
+      #               - key: app
+      #                 operator: In
+      #                 values:
+      #                   - fc-service
+      #           topologyKey: "kubernetes.io/hostname"
+      volumes:
+        - name: fc-file-store
+          persistentVolumeClaim:
+            claimName: fc-filestore-claim
+      restartPolicy: Always

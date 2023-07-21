@@ -1,0 +1,6 @@
+**/.terraform/**
+**/.terraform.**
+**/.terraform.**
+**/terraform.tfstate**
+**/.env
+gx-catalogue-ionos/kubeconfig-ionos.yaml
