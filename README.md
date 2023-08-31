@@ -116,3 +116,8 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" https://fc.opengpt-x.de/users
 # get roles
 curl -H "Authorization: Bearer $ACCESS_TOKEN" https://fc.opengpt-x.de/roles
 ```
+
+## 2.6 Go to the demo portal
+
+Go to Go to https://fc-demo-portal.opengpt-x.de.
+Login with the user created before.
