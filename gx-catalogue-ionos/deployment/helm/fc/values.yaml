@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/digital-ecosystems/fc-server
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "43c210382698f0640410b2f7bedf8774d6834962"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
@@ -93,3 +93,7 @@ fc:
   keycloakAuthServerUrl: "https://fc-key-server.federated-catalogue.example.com"
   springSecurityOauth2ResourceserverJwtIssuerUri: "https://fc-key-server.federated-catalogue.example.com/realms/gaia-x"
   keycloakClientSecret: "keycloak-client-secret"
+  verification:
+    semantics: "true"
+    schema: "true"
+    signatures: "true"

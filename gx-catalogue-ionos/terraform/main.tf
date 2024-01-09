@@ -50,6 +50,26 @@ variable "namespace" {
   default = "federated-catalogue"
 }
 
+variable "verification_semantics" {
+  default = "true"
+}
+
+variable "verification_schema" {
+  default = "true"
+}
+
+variable "verification_signatures" {
+  default = "true"
+}
+
+variable "fc_server_image_tag" {
+  default = "master"
+}
+
+variable "demo_portal_image_tag" {
+  default = "master"
+}
+
 module "infrastructure_services" {
   source = "./infrastructure_services"
 
@@ -65,4 +85,9 @@ module "federated_catalogue" {
 
   dns_zone = "${var.dns_zone}"
   namespace = "${var.namespace}"
+  verification_semantics = "${var.verification_semantics}"
+  verification_schema = "${var.verification_schema}"
+  verification_signatures = "${var.verification_signatures}"
+  fc_server_image_tag = "${var.fc_server_image_tag}"
+  demo_portal_image_tag = "${var.demo_portal_image_tag}"
 }

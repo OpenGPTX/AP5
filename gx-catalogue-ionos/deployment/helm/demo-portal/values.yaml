@@ -8,7 +8,7 @@ image:
   repository: ghcr.io/digital-ecosystems/demo-portal
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "43c210382698f0640410b2f7bedf8774d6834962"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
