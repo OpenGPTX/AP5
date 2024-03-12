@@ -32,8 +32,24 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: FEDERATED_CATALOGUE_VERIFICATION_SEMANTICS
+              value: {{ .Values.fc.verification.semantics | quote }}
+            - name: FEDERATED_CATALOGUE_VERIFICATION_SCHEMA
+              value: {{ .Values.fc.verification.schema | quote }}
+            - name: FEDERATED_CATALOGUE_VERIFICATION_SIGNATURES
+              value: {{ .Values.fc.verification.signatures | quote }}
             - name: GRAPHSTORE_URI
               value: {{ .Values.fc.graphstoreUri }}
+            - name: GRAPHSTORE_USER
+              valueFrom:
+                secretKeyRef:
+                  name: neo4j-pass-secret
+                  key: user
+            - name: GRAPHSTORE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: neo4j-pass-secret
+                  key: password
             - name: SPRING_DATASOURCE_URL
               value: {{ .Values.fc.datasourceUrl }}
             - name: GRAPHSTORE_QUERY_TIMEOUT_IN_SECONDS

@@ -40,7 +40,7 @@ spec:
             - name: NEO4J_AUTH
               valueFrom:
                 secretKeyRef:
-                  name: fc-neo4j-pass-secret
+                  name: neo4j-pass-secret
                   key: auth
             - name: NEO4J_dbms_security_procedures_unrestricted
               value: "gds.*,apoc.*,n10s.*"

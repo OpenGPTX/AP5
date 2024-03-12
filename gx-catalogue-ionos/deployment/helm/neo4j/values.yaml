@@ -80,4 +80,5 @@ affinity: {}
 storageSize: 10Gi
 
 neo4j:
-  auth: neo4j/12345
+  user: neo4j
+  password: 12345

@@ -27,6 +27,16 @@ spec:
           env:
             - name: GRAPHSTORE_URI
               value: bolt://fc-neo4j:7687
+            - name: GRAPHSTORE_USER
+              valueFrom:
+                secretKeyRef:
+                  name: neo4j-pass-secret
+                  key: user
+            - name: GRAPHSTORE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: neo4j-pass-secret
+                  key: password
             - name: SPRING_DATASOURCE_URL
               value: jdbc:postgresql://fc-postgres:5432/postgres
             - name: GRAPHSTORE_QUERY_TIMEOUT_IN_SECONDS
@@ -40,7 +50,7 @@ spec:
             - name: KEYCLOAK_CREDENTIALS_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: fc-server-keys-secret
+                  name: fc-keycloak-client-secret
                   key: keycloak_client_secret
           ports:
             - name: http
