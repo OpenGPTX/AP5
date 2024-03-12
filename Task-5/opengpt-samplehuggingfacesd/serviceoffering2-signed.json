@@ -1,0 +1,75 @@
+{
+    "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+    "@id" : "http://example.edu/verifiablePresentation/self-description2",
+    "type" : [ "VerifiablePresentation" ],
+    "verifiableCredential" : {
+      "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+      "@id" : "https://www.example.org/huggingfacellm",
+      "@type" : [ "VerifiableCredential" ],
+      "issuer" : "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1",
+      "issuanceDate" : "2023-11-08T18:48:09Z",
+      "credentialSubject" : {
+        "@context" : {
+          "dcat" : "http://www.w3.org/ns/dcat#",
+          "gax-core" : "https://w3id.org/gaia-x/core#",
+          "gax-trust-framework" : "https://w3id.org/gaia-x/gax-trust-framework#",
+          "xsd" : "http://www.w3.org/2001/XMLSchema#",
+          "cc" : "http://creativecommons.org/ns#",
+          "schema" : "http://schema.org/",
+          "cred" : "https://www.w3.org/2018/credentials#",
+          "void" : "http://rdfs.org/ns/void#",
+          "owl" : "http://www.w3.org/2002/07/owl#",
+          "gax-validation" : "http://w3id.org/gaia-x/validation#",
+          "skos" : "http://www.w3.org/2004/02/skos/core#",
+          "voaf" : "http://purl.org/vocommons/voaf#",
+          "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+          "vcard" : "http://www.w3.org/2006/vcard/ns#",
+          "dct" : "http://purl.org/dc/terms/",
+          "sh" : "http://www.w3.org/ns/shacl#",
+          "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "ids" : "https://w3id.org/idsa/core/",
+          "vann" : "http://purl.org/vocab/vann/",
+          "foaf" : "http://xmlns.com/foaf/0.1/",
+          "did" : "https://www.w3.org/TR/did-core/#"
+        },
+        "https://w3id.org/gaia-x/gax-trust-framework#Model" : "Huggingface Large language Model",
+        "https://w3id.org/gaia-x/gax-trust-framework#architectures" : "MistralForCausalLM",
+        "https://w3id.org/gaia-x/gax-trust-framework#transformers_version" : "4.34.0.dev0",
+        "https://w3id.org/gaia-x/gax-trust-framework#" : "Huggingface Large language Model",
+        "gax-core:offeredBy" : {
+          "@id" : "gax-trust-framework:Hugging face"
+        },
+        "@id" : "gax-trust-framework:HuggingFace",
+        "@type" : "gax-trust-framework:ServiceOffering",
+        "gax-trust-framework:dataAccountExport" : {
+          "@type" : "gax-trust-framework:DataAccountExport",
+          "gax-trust-framework:legalName" : "Hugging Face Transformer LLM",
+          "gax-trust-framework:transformers_version" : "4.34.0.dev0",
+          "gax-trust-framework:model_type" : "mistral"
+        },
+        "gax-trust-framework:termsAndConditions" : {
+          "@type" : "gax-trust-framework:TermsAndConditions",
+          "gax-trust-framework:content" : {
+            "@type" : "xsd:anyURI",
+            "@value" : "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1"
+          },
+          "gax-trust-framework:hash" : "1234"
+        },
+        "gax-trust-framework:policy" : "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1/blob/main/config.json"
+      },
+      "proof" : {
+        "type" : "JsonWebSignature2020",
+        "created" : "2023-11-09T09:30:28Z",
+        "proofPurpose" : "assertionMethod",
+        "verificationMethod" : "did:web:compliance.lab.gaia-x.eu",
+        "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..WJS-KZ8SJCQf9CvfWogHCOlJij3PrR_rxyBGq0Mn14qR6VbuPXG038EzA4aixJvYiL75pC8F2elReGTw3C0ThDRaHjvzkI9OLUY2UEoGseDdQwl8T_A-u9oDqtB9eV9r9bv6rh769TpY9T7a_O-etVRtlk1MhmRf_M-z3CuePBd5ofisnCYAJCSbUwOZuSKoVa42Qqh-6Va9QyMKJz0pdQOdEqnPFeC3gOIwxhSSyEkCKue5gwuS0nOXuMKEXu7utNf1j-fLijUnsOW9P6h9xv04hT7HdGbDKkHrzbVmwrLL34253Ztkjr6KO3WWfOxFIKOLlfWyudiPZo4i1vBgtplSflFfL3MkMlH05XfwoBwcuq6Cgfg6DB4UtIpKHq1bedKVBCstnIB7UWEWsvZWFwXFJEvS_EU7P2wpZmqW-sqINH7em4WVg5_he6EZfNaK5SQ6xa0jEdj6qhXp2FiEBFch4tcHvGERovMAPW8NsazzJ2VPJOk6vqHWjXZzPm6FYSyTR0ruMmYMh7Ui_UhD0I00izPwxoXAV5nbi5T4CuvNGh-qCdTj3lgT7IFzIn7bk907DW6GXYHsYiKraQEe9ifoq0yiVJmBe-vjiKO5Fd9fT0bTRaEDhozmFQ_x3EzH8CCoZP55skJxtcJLNb7E-V3M8gCclWYPFTfb5KKDoRU"
+      }
+    },
+    "proof" : {
+      "type" : "JsonWebSignature2020",
+      "created" : "2023-11-09T09:30:28Z",
+      "proofPurpose" : "assertionMethod",
+      "verificationMethod" : "did:web:compliance.lab.gaia-x.eu",
+      "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..ZjCDPQPLRWn2voM1Sy5XfhKzPSo9ALuwiPzF-g-IfgehGqxwSi43dYTwd4FpwL1CE1lyhZ2WHGwfJupCPUnjDwwrWEl-eHwuzs2DbCmt1pRRLegKseD5i-E6iyMruVW4b38_815Dv_XxfRHDpuZKUZ0FkGEIy5wG5eRVPvBQ1-0mXik08KV0lIIwE6-LuctZNn_q57eK8AJ6mePbXS2yNDeiAVG8pplbtqONQhdC68IUeOsEIX8AetLdr2ZG6GYdLklKqKcGIdlqs1BYt54Risfv8twgC3mNaoW3ZOC6h1MfWmqWzboMFOo4wi6Ye8hHbLy9_SkU9Ieb1CP6oqxVcJRU9mLIWIwEbI9_ABmY1h8qZpWuJGFhHueC1RmLMvQRqVwyFaJks8RunmIU419Z3Q1hJ-cre2iQev_v5MQOAsj_bCSXxEQwkWCDvERc7UAy3e8pTrhK8I4cZXqChTryaqF35j-txLB7IPJAuXAVPdcT30Vv-JFVLDVNxOKJNMqglaJGIMKX0Z22-R8_suKsFQuoZGyox3A0ZouBAfYT-F3Hl5I13xjO46_aVh-AaQrIBLCxJ0Pzp6JQ7D5Kf4BbKMG198law4o6U9Of-Mootwfdu5rppJbv9pPCegP0gV_1rQ6vruQK_L2Qa0BFDO5jY-FOHC-t25qyE83YvTgFB4s"
+    }
+  }
