@@ -1,0 +1,104 @@
+{
+    "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+    "@id" : "https://huggingface.co/gpt2/verifiablePresentation/self-description1",
+    "type" : [ "VerifiablePresentation" ],
+    "verifiableCredential" : {
+      "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+      "@id" : "https://https://example.com/sd/legalPerson.json",
+      "@type" : [ "VerifiableCredential" ],
+      "issuer" : "https://huggingface.co/gpt2",
+      "issuanceDate" : "2023-11-17T18:48:09Z",
+      "credentialSubject" : {
+        "@context" : {
+          "cc" : "http://creativecommons.org/ns#",
+          "schema" : "http://schema.org/",
+          "cred" : "https://www.w3.org/2018/credentials#",
+          "void" : "http://rdfs.org/ns/void#",
+          "owl" : "http://www.w3.org/2002/07/owl#",
+          "xsd" : "http://www.w3.org/2001/XMLSchema#",
+          "gax-validation" : "http://w3id.org/gaia-x/validation#",
+          "skos" : "http://www.w3.org/2004/02/skos/core#",
+          "voaf" : "http://purl.org/vocommons/voaf#",
+          "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+          "vcard" : "http://www.w3.org/2006/vcard/ns#",
+          "gax-core" : "http://w3id.org/gaia-x/core#",
+          "dct" : "http://purl.org/dc/terms/",
+          "sh" : "http://www.w3.org/ns/shacl#",
+          "gax-trust-framework" : "http://w3id.org/gaia-x/gax-trust-framework#",
+          "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "ids" : "https://w3id.org/idsa/core/",
+          "dcat" : "http://www.w3.org/ns/dcat#",
+          "vann" : "http://purl.org/vocab/vann/",
+          "foaf" : "http://xmlns.com/foaf/0.1/",
+          "did" : "https://www.w3.org/TR/did-core/#"
+        },
+        "@id" : "did:web:registry.gaia-x.eu:LegalPerson:stP496l-nwqem1xP617lf349JF2C7RLmEcJ6",
+        "@type" : "gax-trust-framework:LegalPerson",
+        "gax-trust-framework:legalName" : {
+          "@value" : "Hugging Face Large Language Model",
+          "@type" : "xsd:string"
+        },
+        "gax-trust-framework:legalForm" : "LLC",
+        "gax-trust-framework:description" : {
+          "@value" : "opengptx large language model",
+          "@type" : "xsd:string"
+        },
+        "gax-trust-framework:registrationNumber" : {
+          "@value" : "ODJYV34CH3645SKGBNDK",
+          "@type" : "xsd:string"
+        },
+        "gax-trust-framework:legalAddress" : {
+          "@type" : "vcard:Address",
+          "vcard:country-name" : {
+            "@value" : "Germany",
+            "@type" : "xsd:string"
+          },
+          "vcard:street-address" : {
+            "@value" : "amfreistein",
+            "@type" : "xsd:string"
+          },
+          "vcard:postal-code" : {
+            "@value" : "45141",
+            "@type" : "xsd:string"
+          },
+          "vcard:locality" : {
+            "@value" : "Essen",
+            "@type" : "xsd:string"
+          }
+        },
+        "gax-trust-framework:headquarterAddress" : {
+          "@type" : "vcard:Address",
+          "vcard:country-name" : {
+            "@value" : "Germany",
+            "@type" : "xsd:string"
+          },
+          "vcard:street-address" : {
+            "@value" : "Fraunkfurt",
+            "@type" : "xsd:string"
+          },
+          "vcard:postal-code" : {
+            "@value" : "60306",
+            "@type" : "xsd:string"
+          },
+          "vcard:locality" : {
+            "@value" : "Frankfurterstr",
+            "@type" : "xsd:string"
+          }
+        }
+      },
+      "proof" : {
+        "type" : "JsonWebSignature2020",
+        "created" : "2023-11-17T20:46:22Z",
+        "proofPurpose" : "assertionMethod",
+        "verificationMethod" : "did:web:compliance.lab.gaia-x.eu",
+        "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..ktdUkQmL_D7U86vfCL6o1gRuKKbJ9_cUznIRarWIFVIRpQ9d7TrYU01NarX4xL5cKY-0T1xfbdGrO6qFwh11HPl2zGjZzh6KLEBP9uJfNA_ucU7uf9NTZo2VBDOBVx0mHYrcJjunZVZx6HqvBOSlRjx8YuMlJbe5BLFx5lZDz7OUevUh8GMq3-1LUZuYWdhpsTqVIwk56Bsem-fRjXUKUFF3FuGeY_j-Re68rZzrwo1XS5tIEZly2TATlhvtJPNzauUQwNmrD67ZQVXBO-KEd5CQH9nfGP2Pz9o_29JoY3jHn64opUf-RJAiGpeOveQqhRQHTdNR8jftfPCtmpx5OCw39izeeoLs49MkGlDHNQZm4PpZFU-KhBR5Cn5eJh87Qj64ZG9hUn-7kdIiBR3B0grPgEwLA2Yxpbh5VY79KHzwRt_Pura5tF79OEAfVS-_0KGcjgf0hZwVEL8pJ9cYwzDfT5BkBJjOdkmLZH09NtSO8sYSqNaJoEAn0xaXJxQqiKGj7X44X6v72PgD9qcJ0Tv_eVZ9H4pmM8pMiZojfvmYAQS6OaYq_b5IDTUOYqhMwZNd9rzly6lJindGlolf-MdPjF4tPQ8IFTS5RGBQAs0SNI8pArtm-_a9BQo9dRvqMNdiQYdqQZxTjcvv5W882wiXyB-u_07B7rTFq1zHz50"
+      }
+    },
+    "proof" : {
+      "type" : "JsonWebSignature2020",
+      "created" : "2023-11-17T20:46:23Z",
+      "proofPurpose" : "assertionMethod",
+      "verificationMethod" : "did:web:compliance.lab.gaia-x.eu",
+      "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..gW5FlNrKGPV_8g4PkBEq9sztVxwFrFz1B3X66QdTlwCs1KRwWCsW4yFkveNB__G7Y0-0JES9TNcdbLIxy3EsQk31qSqndHeeHVYE8XqGMTxQfi12n5Ym-Ym3D_aCpxCKMba_SHhqh4Eo2SQ6aGMqHj0YT0pkeoRglxtP3TB287NorTq2me8wPVJdNuvoTJtMwOmiJ42sJZ0ffTGYsM-6LHbKGYOKlIYFMH285EnAyzPfYuFaIwuWGHPwdlnlWVtosmRNpGijvg8sJj2a3Lv-wiCbYh_PRsFO3h61ILj9CNU4xTSUjDmzWcmfyAvb1fegxxnBJFRXDN2Fcl38E4gE9NEOpbozQI5DEFr-PXAenk_WcZn6fzbXV7MO7yFj6QlG4EaPavLVi7dOiYTfVAsHq0wKiTJCyhKB9V_jiaTr9tjllvIQMX97dVXyv9qujaif2IRgTlIcsyi-49OTtWDY9EFYyUMymSOtwKhVsMMYhDjCRwVIBVR_ACGE2lLJnqSgOMHN1GCgL6lpW8H0ejZdRKfbP5Ddzp-Ny8rheWRuhO7wPHekDJXX16i-ZgW9m4TC6G7M6zVaQPqgVN2WMn07_CtnBcGmK-a1GMDHpMyon4hmF_iVHHzHlUoT3X4Hj6b7vLAITua116jpf_mnTUwDs875rP4qK7s2xSuT44aq2tg"
+    }
+  }
