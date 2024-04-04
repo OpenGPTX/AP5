@@ -35,6 +35,10 @@ To create the necessary infrastructure run the script ```./create-ionos-kubernet
 source .env && ./create-ionos-kubernetes.sh
 ```
 
+### 1.1 Install ingress-controller
+
+    helm install --replace -n nginx-ingress nginx-ingress ingress-nginx/ingress-nginx -f helm/ingress-controller/values.yaml --version 4.7.2 --create-namespace
+
 ### 2. cert-manager (optional)
 
 ```bash
@@ -45,12 +49,7 @@ helm repo update
 # Install CRDs
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
 # Install cert-manager
-helm install \
-  cert-manager jetstack/cert-manager \
-  --namespace cert-manager \
-  --create-namespace \
-  --version v1.11.0 \
-  --create-namespace
+helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.11.0 --create-namespace
 
 # Create a ClusterIssuer
 kubectl apply -f helm/cert-manager/cluster-issuer.yaml
