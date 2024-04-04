@@ -54,14 +54,14 @@ ingress:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
     kubernetes.io/ingress.allow-http: "true"
   hosts:
-    - host: fc-key-server.federated-catalogue.example.com
+    - host: fc-key-server.test-dataloft-ionos.de
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
    - secretName: fc-key-server-tls
      hosts:
-       - fc-key-server.federated-catalogue.example.com
+       - fc-key-server.test-dataloft-ionos.de
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -89,7 +89,7 @@ keycloak:
   db: postgres
   dbUsername: postgres
   dbPassword: postgres
-  hostname: fc-key-server.federated-catalogue.example.com
+  hostname: fc-key-server.test-dataloft-ionos.de
   federatedCatalogueClientSecret: "keycloak-client-secret"
   federatedCatalogueClientRedirectUris: 
-    - "https://fc-demo-portal.federated-catalogue.example.com/*"
+    - "https://fc-demo-portal.test-dataloft-ionos.de/*"

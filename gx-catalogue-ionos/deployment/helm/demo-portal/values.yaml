@@ -53,14 +53,14 @@ ingress:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
     kubernetes.io/ingress.allow-http: "true"
   hosts:
-    - host: fc-demo-portal.federated-catalogue.example.com
+    - host: fc-demo-portal.test-dataloft-ionos.de
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
    - secretName: demo-portal-tls
      hosts:
-       - fc-demo-portal.federated-catalogue.example.com
+       - fc-demo-portal.test-dataloft-ionos.de
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -82,6 +82,6 @@ affinity: {}
 
 # The following values are used to configure the demo portal
 demoPortal:
-  keycloakIssuerUri: "https://fc-key-server.federated-catalogue.example.com/realms/gaia-x"
+  keycloakIssuerUri: "https://fc-key-server.test-dataloft-ionos.de/realms/gaia-x"
   federatedCatalogueBaseUri: "http://fc:8081"
   keycloakClientSecret: "keycloak-client-secret"
