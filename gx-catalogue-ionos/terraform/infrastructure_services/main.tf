@@ -28,6 +28,7 @@ variable "dns_zone" {
   default = "example.com"
 }
 resource "helm_release" "keycloak" {
+  depends_on = [helm_release.postgres]
   name       = "keycloak"
 
   repository = "../deployment/helm"
