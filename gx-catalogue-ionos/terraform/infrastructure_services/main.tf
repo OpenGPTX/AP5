@@ -27,8 +27,26 @@ resource "helm_release" "postgres" {
 variable "dns_zone" {
   default = "example.com"
 }
+resource "time_sleep" "wait_30_seconds" {
+  depends_on = [helm_release.postgres, helm_release.neo4j]
+  create_duration = "30s"
+}
+
+
+variable "keycloak_admin_username" {
+  description = "Keycloak administrator username"
+  type        = string
+  sensitive   = true
+  default     = "admin"
+}
+variable "keycloak_admin_password" {
+  description = "Keycloak administrator password"
+  type        = string
+  sensitive   = true
+  default     = "admin"
+}
 resource "helm_release" "keycloak" {
-  depends_on = [helm_release.postgres]
+  depends_on = [helm_release.postgres, helm_release.neo4j, time_sleep.wait_30_seconds]
   name       = "keycloak"
 
   repository = "../deployment/helm"
@@ -55,6 +73,14 @@ resource "helm_release" "keycloak" {
   set {
     name  = "keycloak.hostname"
     value = "fc-key-server.${var.dns_zone}"
+  }
+  set {
+    name  = "keycloak.adminUser"
+    value = "${var.keycloak_admin_username}"
+  }
+  set {
+    name  = "keycloak.adminPassword"
+    value = "${var.keycloak_admin_password}"
   }
 }
 
