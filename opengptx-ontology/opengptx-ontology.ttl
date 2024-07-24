@@ -1,0 +1,291 @@
+### Permalink to be defined at https://w3id.org/gaia-x/opengptx
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix opengptx: <https://w3id.org/gaia-x/opengptx#> .
+
+opengptx: a owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+opengptx:BiasRisksLimitations a owl:Class .
+
+opengptx:DataResource a owl:Class ;
+	rdfs:subClassOf	 gx:DataResource ;
+    rdfs:comment "OpenGPT-X resources"@en .
+
+opengptx:Dataset a owl:Class .
+
+opengptx:EnvironmentalImpact a owl:Class .
+
+opengptx:Evaluation a owl:Class .
+
+opengptx:LanguageModel a owl:Class .
+
+opengptx:ModelDescription a owl:Class .
+
+opengptx:ModelSource a owl:Class .
+
+opengptx:Service a owl:Class ;
+  rdfs:comment "Services using OpenGPT-X LLM"@en .
+
+opengptx:ServiceOffering a owl:Class ;
+	rdfs:subClassOf	 gx:ServiceOffering ;
+    rdfs:comment "OpenGPT-X Service Offering"@en .
+
+opengptx:TechnicalSpecifications a owl:Class .
+
+opengptx:TrainingDetails a owl:Class .
+
+opengptx:Use a owl:Class .
+
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+opengptx:hasDescription a owl:ObjectProperty ;
+    rdfs:domain opengptx:LanguageModel ;
+    rdfs:range opengptx:ModelDescription ;
+    rdfs:comment "Links a model to its description".
+
+
+opengptx:hasEnvironmentalImpact a owl:ObjectProperty ;
+    rdfs:domain opengptx:LanguageModel ;
+    rdfs:range opengptx:EnvironmentalImpact .
+
+
+opengptx:hasSource a owl:ObjectProperty ;
+    rdfs:domain opengptx:LanguageModel ;
+    rdfs:range opengptx:ModelSource .
+
+opengptx:hasServiceOffering a owl:ObjectProperty ;
+    rdfs:domain opengptx:Service ;
+    rdfs:range opengptx:ServiceOffering .
+
+
+opengptx:hasTechnicalSpecifications a owl:ObjectProperty ;
+    rdfs:domain opengptx:LanguageModel ;
+    rdfs:range opengptx:TechnicalSpecifications .
+
+
+opengptx:hasTestingDataset a owl:ObjectProperty ;
+    rdfs:domain opengptx:Evaluation ;
+    rdfs:range opengptx:Dataset .
+
+
+opengptx:hasTrainingDetails a owl:ObjectProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range opengptx:TrainingDetails .
+
+
+opengptx:hasUse a owl:ObjectProperty ;
+    rdfs:domain opengptx:LanguageModel ;
+    rdfs:range opengptx:Use .
+
+
+opengptx:uses a owl:ObjectProperty ;
+    rdfs:domain opengptx:Service ;
+    rdfs:range opengptx:DataResource .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+opengptx:CloudProvider a owl:DatatypeProperty ;
+                rdfs:domain opengptx:EnvironmentalImpact ;
+                rdfs:range xsd:string .
+
+
+opengptx:CloudRegion a owl:DatatypeProperty ;
+              rdfs:domain opengptx:EnvironmentalImpact ;
+              rdfs:range xsd:string .
+
+
+opengptx:CarbonEmitted a owl:DatatypeProperty ;
+             rdfs:domain opengptx:EnvironmentalImpact ;
+             rdfs:range xsd:string .
+
+opengptx:ComputeRegion a owl:DatatypeProperty ;
+             rdfs:domain opengptx:EnvironmentalImpact ;
+             rdfs:range xsd:string .
+
+opengptx:Demo a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range xsd:string .
+
+opengptx:DevelopedBy a owl:DatatypeProperty ;
+           rdfs:domain opengptx:ModelDescription ;
+           rdfs:range xsd:string .
+
+opengptx:DirectUse a owl:DatatypeProperty ;
+            rdfs:domain opengptx:Use ;
+            rdfs:range xsd:string .
+
+opengptx:DownstreamUse a owl:DatatypeProperty ;
+                rdfs:domain opengptx:Use ;
+                rdfs:range xsd:string .
+
+opengptx:EnvironmentalImpact a owl:DatatypeProperty ;
+                      rdfs:domain opengptx:LanguageModel ;
+                      rdfs:range xsd:string .
+
+opengptx:FundedBy a owl:DatatypeProperty ;
+           rdfs:domain opengptx:ModelDescription ;
+           rdfs:range xsd:string .
+
+opengptx:HardwareType a owl:DatatypeProperty ;
+    rdfs:domain opengptx:EnvironmentalImpact ;
+    rdfs:range xsd:string .
+
+
+opengptx:HoursUsed a owl:DatatypeProperty ;
+    rdfs:domain opengptx:EnvironmentalImpact ;
+    rdfs:range xsd:string .
+
+
+opengptx:License a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelDescription ;
+    rdfs:range xsd:string .
+
+opengptx:Language a owl:DatatypeProperty ;
+           rdfs:domain opengptx:ModelDescription ;
+           rdfs:range xsd:string .
+
+opengptx:Finetuned a owl:DatatypeProperty ;
+           rdfs:domain opengptx:ModelDescription ;
+           rdfs:range xsd:string .
+
+opengptx:ModelExamination a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range xsd:string .
+
+opengptx:ModelType a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelDescription ;
+    rdfs:range xsd:string .
+
+opengptx:OutOfScopeUse a owl:DatatypeProperty ;
+    rdfs:domain opengptx:Use ;
+    rdfs:range xsd:string .
+
+
+opengptx:Paper a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range xsd:string .
+
+
+opengptx:Preprocessing a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+opengptx:BiasRecommendations a owl:DatatypeProperty ;
+    rdfs:domain opengptx:BiasRisksLimitations ;
+    rdfs:range xsd:string .
+
+
+opengptx:Repository a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range xsd:string .
+
+
+opengptx:TestingResults a owl:DatatypeProperty ;
+    rdfs:domain opengptx:Evaluation ;
+    rdfs:range xsd:string .
+
+
+opengptx:TestingResultsSummary a owl:DatatypeProperty ;
+    rdfs:domain opengptx:Evaluation ;
+    rdfs:range xsd:string .
+
+
+opengptx:SharedBy a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelDescription ;
+    rdfs:range xsd:string .
+
+
+opengptx:GetStartedCode a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range xsd:string .
+
+
+opengptx:SpeedsSizesTimes a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+opengptx:TestingData a owl:DatatypeProperty ;
+    rdfs:domain opengptx:Evaluation ;
+    rdfs:range xsd:string .
+
+
+opengptx:TestingFactors a owl:DatatypeProperty ;
+    rdfs:domain opengptx:Evaluation ;
+    rdfs:range xsd:string .
+
+
+opengptx:TestingMetrics a owl:DatatypeProperty ;
+    rdfs:domain opengptx:Evaluation ;
+    rdfs:range xsd:string .
+
+
+opengptx:TrainingData a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+
+opengptx:TrainingDataAPI a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+
+opengptx:TrainingDataName a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+
+opengptx:TrainingDataUrl a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+
+opengptx:TrainingProcedure a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+
+opengptx:TrainingRegime a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TrainingDetails ;
+    rdfs:range xsd:string .
+
+opengptx:BiasRisksLimitations a owl:DatatypeProperty ;
+    rdfs:domain opengptx:BiasRisksLimitations ;
+    rdfs:range xsd:string .
+
+
+opengptx:ModelSpecs a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TechnicalSpecifications ;
+    rdfs:range xsd:string .
+
+opengptx:ComputeInfrastructure a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TechnicalSpecifications ;
+    rdfs:range xsd:string .
+
+opengptx:HardwareRequirements a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TechnicalSpecifications ;
+    rdfs:range xsd:string .
+
+opengptx:Software a owl:DatatypeProperty ;
+    rdfs:domain opengptx:TechnicalSpecifications ;
+    rdfs:range xsd:string .
+
+opengptx:Citation a owl:DatatypeProperty ;
+    rdfs:domain opengptx:ModelSource ;
+    rdfs:range xsd:string .
+
+

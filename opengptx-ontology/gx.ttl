@@ -1,0 +1,44 @@
+@prefix gax-core: <https://w3id.org/gaia-x/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+
+gx: a owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+gx:LegalPerson
+    a               owl:Class;
+    rdfs:label      "LegalPerson"@en ;
+    rdfs:subClassOf  gax-core:Participant .
+
+
+gx:DataConsumer 
+    a owl:Class ;
+    rdfs:label      "DataConsumer"@en ;                                         
+    rdfs:subClassOf gx:LegalPerson .
+
+
+gx:DataProvider 
+    a owl:Class ;
+    rdfs:label      "DataProvider"@en ;                                         
+    rdfs:subClassOf gx:LegalPerson .
+
+
+ gx:DataResource
+    a owl:Class ;
+    rdfs:label      "DataResource"@en ;                                         
+    rdfs:subClassOf gax-core:Resource .
+
+gx:ServiceOffering
+	a		 		owl:Class;
+	rdfs:label		"ServiceOffering"@en ;
+	rdfs:subClassOf	 gax-core:ServiceOffering .
+
+
+
