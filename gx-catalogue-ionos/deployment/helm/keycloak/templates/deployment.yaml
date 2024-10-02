@@ -32,7 +32,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
-            - "start --auto-build --import-realm"
+            - "start"
+            - "--import-realm"
             - "-Dkeycloak.profile.feature.upload_scripts=enabled"
             - "--hostname={{ .Values.keycloak.hostname }}"
             - "--log-level=DEBUG,io.quarkus:INFO,liquibase:INFO,org.hibernate:INFO,org.infinispan:INFO,org.keycloak.services.scheduled:INFO,org.keycloak.transaction:INFO,io.netty.buffer.PoolThreadCache:INFO,org.keycloak.models.sessions.infinispan:INFO"

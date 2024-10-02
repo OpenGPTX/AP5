@@ -82,6 +82,10 @@ resource "helm_release" "keycloak" {
     name  = "keycloak.adminPassword"
     value = "${var.keycloak_admin_password}"
   }
+  set {
+    name  = "image.tag"
+    value = "23.0.7"
+  }
 }
 
 # helm install -n federated-catalogue neo4j -f neo4j/values.yaml neo4j/neo4j
