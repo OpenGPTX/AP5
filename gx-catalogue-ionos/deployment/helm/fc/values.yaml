@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/digital-ecosystems/fc-server
+  repository: mcrts/xfsc-fc-server
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -90,8 +90,8 @@ fc:
   graphstoreUri: "bolt://neo4j:7687"
   datasourceUrl: "jdbc:postgresql://postgres:5432/postgres"
   graphstoreQueryTimeoutInSeconds: "5"
-  keycloakAuthServerUrl: "https://fc-key-server.federated-catalogue.example.com"
-  springSecurityOauth2ResourceserverJwtIssuerUri: "https://fc-key-server.federated-catalogue.example.com/realms/gaia-x"
+  keycloakAuthServerUrl: "https://fc-key-server.test-dataloft-ionos.de"
+  springSecurityOauth2ResourceserverJwtIssuerUri: "https://fc-key-server.test-dataloft-ionos.de/realms/gaia-x"
   keycloakClientSecret: "keycloak-client-secret"
   verification:
     semantics: "true"

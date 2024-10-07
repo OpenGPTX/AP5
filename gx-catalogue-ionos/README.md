@@ -51,7 +51,7 @@ If you don't have `external-dns` configured on your cluster, follow [these instr
 ### 3. Use Ionos DNS service (Optional)
 
 In order to use the DNS service, you should have skipped step 2 and you will need NS record pointing to Ionos name servers
-
+kubectl create secret generic ionos-credentials --from-literal=api-key='api-key'
 ```
 ns-ic.ui-dns.com
 ns-ic.ui-dns.de
@@ -64,6 +64,8 @@ You will also need to set ```DNS_TYPE``` variable to True:
 export DNS_TYPE='ionos_dnsaas'
 ```
 If you have DNS zone already configured set ```IONOS_DNS_ZONE_ID``` environment variable.
+
+Follow the instructions in /external-dns-ionos-webhook/README_EXTERNAL_DNS.md
 
 ### 4. Install the Federated-Catalogue services
 
