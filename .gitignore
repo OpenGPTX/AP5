@@ -5,3 +5,6 @@
 **/.env
 gx-catalogue-ionos/kubeconfig-ionos.yaml
 **/*.log
+OpenGPTX_SDs/.config/cert.ss.pem
+OpenGPTX_SDs/.config/prk.ss.pem
+stapp/.streamlit/secrets.toml
