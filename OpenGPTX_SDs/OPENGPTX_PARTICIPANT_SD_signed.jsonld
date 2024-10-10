@@ -1,0 +1,50 @@
+{
+  "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+  "@id" : "https://example.com/opengpt-x_SD",
+  "type" : [ "VerifiablePresentation" ],
+  "verifiableCredential" : [ {
+    "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+    "@id" : "https://delta-dao.com/.well-known/opengpt-x.json",
+    "type" : [ "VerifiableCredential" ],
+    "issuer" : "https://opengpt-x.de/",
+    "issuanceDate" : "2024-10-09T09:00:00.000Z",
+    "credentialSubject" : {
+      "@id" : "https://w3id.org/gaia-x/gax-trust-framework#opengpt-x",
+      "@type" : [ "https://w3id.org/gaia-x/gax-trust-framework#LegalPerson" ],
+      "https://w3id.org/gaia-x/gax-trust-framework#legalName" : "OpenGPT-X",
+      "https://w3id.org/gaia-x/gax-trust-framework#website" : "https://opengpt-x.de/",
+      "https://w3id.org/gaia-x/gax-trust-framework#registrationNumber" : "",
+      "https://w3id.org/gaia-x/gax-trust-framework#blockchainAccountId" : [ {
+        "https://w3id.org/gaia-x/gax-trust-framework#blockchainAccountId" : ""
+      } ],
+      "https://w3id.org/gaia-x/gax-trust-framework#headquarterAddress" : {
+        "http://www.w3.org/2006/vcard/ns#country-name" : "",
+        "http://www.w3.org/2006/vcard/ns#street-address" : "",
+        "http://www.w3.org/2006/vcard/ns#postal-code" : "",
+        "http://www.w3.org/2006/vcard/ns#locality" : ""
+      },
+      "https://w3id.org/gaia-x/gax-trust-framework#legalAddress" : {
+        "http://www.w3.org/2006/vcard/ns#country-name" : "",
+        "http://www.w3.org/2006/vcard/ns#street-address" : "",
+        "http://www.w3.org/2006/vcard/ns#postal-code" : "",
+        "http://www.w3.org/2006/vcard/ns#locality" : ""
+      },
+      "https://w3id.org/gaia-x/gax-trust-framework#parentOrganisation" : "",
+      "https://w3id.org/gaia-x/gax-trust-framework#termsAndConditions" : ""
+    },
+    "proof" : {
+      "type" : "JsonWebSignature2020",
+      "created" : "2024-10-09T13:10:54Z",
+      "proofPurpose" : "assertionMethod",
+      "verificationMethod" : "did:web:opengpt-x.de",
+      "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..xe7ezkM1VUC-bC9IXb2Qnfv2dtSPlUyft3eSLO4yUKl9kFOYLmY4LS8_bbeZHQ4g2K9qEE5XNBYekrtF5jPRmX0JIbpWWZlOEDWtf6u2IHqDv4Hn27EiszFcMHuxJoGLF0qrlhoQbLL44gYH4gTy8vlyupEhkOY1F6kgTqm7HtJL4OXptqGdPW1r8M0CEfW5z8HDY9vyeDNktZ7ZvyBrtUneKTtJyuxL-VibMr32GLTmt76SW86CvWzm4Nu_53PEEJhxWtRPHw4uDgIq-CozJK7h1q07xJWCU6IjWm35hc9sy57Kat-LHeMQV80fzIqvaP8Hg4kmsxn467rP6OSgpfykfUWb7_-pMiQjmMXvqnPgkhXO9xNWG21rbdk5WHDQk0xwHmbv8A_D9U9sbJ2MctQEqjgsqeHaZqodAvq_a1Y_qbMC4utP22iQ1EAgNiQ7DW7ko0pvyCXGoEqaiLxHJlroISwjncCo-dMXU-SQX8sB0BaUNBGGyk_KuL0p3Ly9m4HwqN076_Jmt-imNM1tBDDMW8fTLOnxWdufpVfOd_UTdDVBOIc6Mn7IeVyN3E93KZYeqitRfEaMfi1YpME3yzzaJiSF0UE26Zsd8XmfyF6fLuHqYQ9pHxhvU65e-n7jZ6ETZm6ffbojEJR_FY3Zv_HFRhN1DFVc7bIqBHOK87o"
+    }
+  } ],
+  "proof" : {
+    "type" : "JsonWebSignature2020",
+    "created" : "2024-10-09T13:10:55Z",
+    "proofPurpose" : "assertionMethod",
+    "verificationMethod" : "did:web:opengpt-x.de",
+    "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..Jev2APa0xnBL9C7rHOIZTvZsCQCnXxNd4-3evxXUtBKP6p0ll5m9_rpWPvYjoa1qkZpvyElAIVARnRylwY0NQwka2HvtRAj8DjU6GPGlGQK2nC_-U4tYaIg4h92vks6Ki1Ufkp7vd-jZpWTqjhZshDf2z2REBZ4xmIABma9lyvussWt7xwqzleGXYRR_YN_9JWVuHBk-9Poqz18Mz1wtCZZBOCa9eay5R31tzcRnN-5ZFodL5wIWYOc3qNQFsbwFyuKZxFO4CQ_AmKYw1NbUbDtaveG07dDwBMkYdGwkwA9rpRRSyeyQRFRAs9I04kTX6wo_qAI7IDKmboBxHc1hgoV-453PYGzein_gNtxfoOODLy8aFpTQBx91NPb1PGYuKTpzBRmDy3KlgtptD9ftRnP4xiWtbxgCDawrF1SFWH2EqwfJvrokWIwrJH8F8xYpwqitoZJatqfplJivLjaxptbfQHtR496xNORf7ptVIMZ6OzNbu41nTP3vLvWc6mJDkaZv9eMQOC8DKQ6Q3DOHF8r6FNUv9VytgfRuebjcGtKo8mGeXFhRuuyEKQooI0EKHpZU_mChlg58udZlCc710LbV0aGSFKKogdS1LsfPJ3Ll6QnyTxEVFa8qm586jJd0wHUnhXOZmgn3rPPFAsXpIEEFHRYYYcZNJwylUkbHZK4"
+  }
+}
