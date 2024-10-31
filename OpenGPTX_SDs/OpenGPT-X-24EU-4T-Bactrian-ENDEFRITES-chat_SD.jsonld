@@ -37,6 +37,8 @@
                 "gax-trust-framework:accessType": "digital",
                 "gax-trust-framework:requestType": "API"
             },
+            "gax-trust-framework:frontend_url" : "https://service.opengpt-x.de",
+            "gax-trust-framework:backend_url" : "https://api.opengpt-x.de/v2/models/OpenGPT-X-24EU-4T-Bactrian-ENDEFRITES/infer",
             "dcat:keyword": [
                 "LLM",
                 "OpenGPT-X",

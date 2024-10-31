@@ -37,15 +37,29 @@ def query(token, statement, parameters=None):
 def preset_callback(s):
     st.session_state.user_input = s
 
-QUERY_LLMs_OFFERING = """Match (n:ServiceOffering)-[:endpoint]-(m)
+QUERY_LLMs_OFFERING = """Match (n:ServiceOffering)
 where \"LLM\" in n.keyword
-RETURN n.name,m.endpointURL"""
+RETURN n"""
 
 with st.sidebar:
     st.button("Query Software Offering", on_click=preset_callback, args=("Match (n:SoftwareOffering) RETURN n",))
     st.button("Query Service Offering", on_click=preset_callback, args=("Match (n:ServiceOffering) RETURN n",))
     st.button("Query LLMs Offering", on_click=preset_callback, args=(QUERY_LLMs_OFFERING,))
-        
+
+st.html(
+    """
+<style>
+[data-testid="stSidebarContent"] {
+    background-color: #6360b1;
+}
+</style>
+"""
+)
+
+st.logo(
+    "images/logo.svg",
+    size="large",
+)
 
 form = st.form("my_form")
 output = st.container()
