@@ -1,0 +1,51 @@
+{
+	"@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+	],
+	"@id": "https://example.com/opengpt-x_SD",
+	"type": ["VerifiablePresentation"],
+    "verifiableCredential": [
+        {
+            "@context": [
+                "https://www.w3.org/2018/credentials/v1",
+                "https://w3id.org/security/suites/jws-2020/v1"
+            ],
+            "@id": "https://delta-dao.com/.well-known/opengpt-x.json",      
+            "type": [
+                "VerifiableCredential"
+            ],
+            "issuer": "https://opengpt-x.de/",
+            "issuanceDate": "2024-10-09T09:00:00.000Z",
+            "credentialSubject": {
+                "@id": "https://w3id.org/gaia-x/gax-trust-framework#opengpt-x",
+                "@type": [
+                    "https://w3id.org/gaia-x/gax-trust-framework#LegalPerson"
+                ],
+                "https://w3id.org/gaia-x/gax-trust-framework#legalName": "OpenGPT-X",
+                "https://w3id.org/gaia-x/gax-trust-framework#website": "https://opengpt-x.de/",
+                "https://w3id.org/gaia-x/gax-trust-framework#registrationNumber": "",
+                "https://w3id.org/gaia-x/gax-trust-framework#blockchainAccountId": [
+                    {
+                        "https://w3id.org/gaia-x/gax-trust-framework#blockchainAccountId": ""
+                    }
+                ],
+                "https://w3id.org/gaia-x/gax-trust-framework#headquarterAddress": {
+                    "http://www.w3.org/2006/vcard/ns#country-name": "",
+                    "http://www.w3.org/2006/vcard/ns#street-address": "",
+                    "http://www.w3.org/2006/vcard/ns#postal-code": "",
+                    "http://www.w3.org/2006/vcard/ns#locality": ""
+                },
+                "https://w3id.org/gaia-x/gax-trust-framework#legalAddress": {
+                    "http://www.w3.org/2006/vcard/ns#country-name": "",
+                    "http://www.w3.org/2006/vcard/ns#street-address": "",
+                    "http://www.w3.org/2006/vcard/ns#postal-code": "",
+                    "http://www.w3.org/2006/vcard/ns#locality": ""
+                },
+                "https://w3id.org/gaia-x/gax-trust-framework#parentOrganisation": "",
+                "https://w3id.org/gaia-x/gax-trust-framework#termsAndConditions": ""
+            }
+        }
+    ]
+}
+

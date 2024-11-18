@@ -38,5 +38,5 @@ echo $r | jq -r . > text.json
 ```
 
 ```
-curl -X "DELETE" -H "Authorization: Bearer $TOKEN"     -H "Content-Type: application/json"     https://fc.opengpt-x.de/self-descriptions/
+curl -X "DELETE" -H "Authorization: Bearer $TOKEN"     -H "Content-Type: application/json"     https://fc.opengpt-x.de/self-descriptions/d15cb37e530d2386c9949ae859055d415d91d39832a5cccadba8fb6272c99b5e
 ```

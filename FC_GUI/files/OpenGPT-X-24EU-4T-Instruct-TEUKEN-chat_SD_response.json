@@ -1,0 +1,11 @@
+{
+    "sdHash": "d15cb37e530d2386c9949ae859055d415d91d39832a5cccadba8fb6272c99b5e",
+    "id": "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+    "status": "active",
+    "issuer": "https://opengpt-x.de/",
+    "validatorDids": [
+      "did:web:opengpt-x.de"
+    ],
+    "uploadDatetime": "2024-11-18T13:06:30.676659033Z",
+    "statusDatetime": "2024-11-18T13:06:30.676659169Z"
+  }
