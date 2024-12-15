@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix opengptx: <https://w3id.org/opengpt-x#> .
+
+# Instance of ModelSource
+opengptx:ModelSource1 a opengptx:ModelSource ;
+    opengptx:Demo "https://example.com/demo" ;
+    opengptx:Repository "https://github.com/opengptx/model" ;
+    opengptx:Citation "Doe, J. (2021). Example Model. Journal of AI." .
