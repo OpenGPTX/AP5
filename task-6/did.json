@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1"
+  ],
+  "id": "did:web:service.opengpt-x.de:lc",
+  "verificationMethod": [
+    {
+      "@context": "https://w3c-ccg.github.io/lds-jws2020/contexts/v1/",
+      "id": "did:web:service.opengpt-x.de:lc#JWK2020-RSA",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:service.opengpt-x.de",
+      "publicKeyJwk": {
+        "kty": "RSA",
+        "n": "zcNVL0SwU12COWQxWcTc9ZMiWetAiJEhi26J9sKTf-TjccgFKuXoaP3uawfAibGwl6GwlrCKznjMaQQ92Xx0rjgbgeCRg5nF2Z851TxNjpZ8wv3SDlB4zx-qgbEPI1dLyKpZWEelgSt7MfGRz1qWAl-jyjsAme0NPSv3GUVltHSb2UzqV1CKJ0nhrSxm8qEZY6mwNNinod9Afbjbk0FqPsYJCHAqLWYMrIQaChRloJ07Pz3DZuUh3DMt63Eh-9tuv5mQr3FNGl0hHqJvWFQQX7aEcHjRT1C4uftVymPdhO6E9nR89dMZlG661fdHtCRPaR9are2kD2342euE4d1bgw",
+        "e": "AQAB",
+        "alg": "PS256",
+        "x5u": "https://service.opengpt-x.de/lc/x509CertificateChain.pem"
+      }
+    },    
+    {
+      "@context": "https://w3c-ccg.github.io/lds-jws2020/contexts/v1/",
+      "id": "did:web:service.opengpt-x.de:lc#X509-JWK2020",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:service.opengpt-x.de",
+      "publicKeyJwk": {
+        "kty": "RSA",
+        "n": "zcNVL0SwU12COWQxWcTc9ZMiWetAiJEhi26J9sKTf-TjccgFKuXoaP3uawfAibGwl6GwlrCKznjMaQQ92Xx0rjgbgeCRg5nF2Z851TxNjpZ8wv3SDlB4zx-qgbEPI1dLyKpZWEelgSt7MfGRz1qWAl-jyjsAme0NPSv3GUVltHSb2UzqV1CKJ0nhrSxm8qEZY6mwNNinod9Afbjbk0FqPsYJCHAqLWYMrIQaChRloJ07Pz3DZuUh3DMt63Eh-9tuv5mQr3FNGl0hHqJvWFQQX7aEcHjRT1C4uftVymPdhO6E9nR89dMZlG661fdHtCRPaR9are2kD2342euE4d1bgw",
+        "e": "AQAB",
+        "alg": "PS256",
+        "x5u": "https://service.opengpt-x.de/lc/x509CertificateChain.pem"
+      }
+    }
+  ],
+  "assertionMethod": [
+    "did:web:service.opengpt-x.de:lc#JWK2020-RSA",
+    "did:web:service.opengpt-x.de:lc#X509-JWK2020"    
+  ]
+}
