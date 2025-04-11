@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://opengpt-x.de/en/gaiax/lrn.json",
+  "issuer": "did:web:gx-notary.arsys.es:v1",
+  "issuanceDate": "2025-02-25T11:49:13.100Z",
+  "credentialSubject": {
+    "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+    "type": "gx:legalRegistrationNumber",
+    "id": "https://opengpt-x.de/en/gaiax/lrn.json",
+    "gx:vatID": "DE148646973",
+    "gx:vatID-countryCode": "DE"
+  },
+  "evidence": [
+    {
+      "gx:evidenceURL": "http://ec.europa.eu/taxation_customs/vies/services/checkVatService",
+      "gx:executionDate": "2025-02-25T11:49:13.099Z",
+      "gx:evidenceOf": "gx:vatID"
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2025-02-25T11:49:13.111Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:gx-notary.arsys.es:v1#X509-JWK2020",
+    "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..2ovqJR5b9J-thgd-hFoWmr19eTdNL5jy3iqJ_jn0249enOU6gocsozavulfeY0Z1gxFuByrfsEQadAILmFnLFi0TKRg4vEef5Z3DjkPgog4Mf7J80YUfa6JmFBfC0rjXoqcON9-gTSivkJFY_tWv1tG9auglE3jF66dQIQRu9FOj45ay9pghcF63Q8BGieXHT_73r-SdfIm4Kqnb9qrKOUCdShsDJZw7Bqm0zvtVOIgNmzilzroB_weFbg0W1UvtmhuvAUmnn5aJJ1iadozm6z2ESw4ujYN3RV0C5gzkLiXpTPI4QWSgezJTs9Pa5F2xd58l9NAEV0yry_uNPxuAb9W0V0QUcH6X2LHRjSOzxMHMM9XaLHTeb89BvdMNY8Lw-dOyQbxIWy635YtJVGuT2q6aASgtNVOWCkVU5bcUL9lFe0ZM9DG3gaJXxyQrg3u8EIGabHEPQNkntDglSL04lo5Q_5bBb1HV567Xo70YzDYr68NOBlKnNFl0kZjune6daub_JGaCQUShArYQkGgxZxeWfxOha69wywyhWd8rO9M6QwX8mRKr20NxbvNgHbNuUy3Pb6jGpSb7EuxU2vIJgyggM9N-o0Q1CFeXjsnz651mEjlUo_4AyXIxXVRn84NYsGUWq2Q9-V_7QytblBGBY8RqkPjeqzaVdJG4kzCjNQw"
+  }
+}
