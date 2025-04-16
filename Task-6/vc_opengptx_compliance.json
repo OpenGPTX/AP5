@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "id": "https://arlabdevelopments.com/opengptx/vc_opengptx_compliance.json",
+  "issuer": "did:web:compliance.arlabdevelopments.com:v1-staging",
+  "issuanceDate": "2025-04-11T13:11:50.013Z",
+  "expirationDate": "2025-07-10T13:11:50.013Z",
+  "credentialSubject": [
+    {
+      "type": "gx:compliance",
+      "id": "https://arlabdevelopments.com/opengptx/lrn.json",
+      "gx:integrity": "sha256-dbc74e74e3ac8079488ef6f0d619b7a7d0a0bda9108d658122dc9dbc4b61179c",
+      "gx:integrityNormalization": "RFC8785:JCS",
+      "gx:version": "22.10",
+      "gx:type": "gx:legalRegistrationNumber"
+    },
+    {
+      "type": "gx:compliance",
+      "id": "https://arlabdevelopments.com/opengptx/termsAndConditions.json",
+      "gx:integrity": "sha256-50e392bae848b4047977b0d5e155d3b31a66fa512ce6b9c799fa081711702fd8",
+      "gx:integrityNormalization": "RFC8785:JCS",
+      "gx:version": "22.10",
+      "gx:type": "gx:GaiaXTermsAndConditions"
+    },
+    {
+      "type": "gx:compliance",
+      "id": "https://arlabdevelopments.com/opengptx/participant.json",
+      "gx:integrity": "sha256-9ec4f829eea027a27fd43df8d317ae7dd72695a190599a967b4ecc8ee3736be8",
+      "gx:integrityNormalization": "RFC8785:JCS",
+      "gx:version": "22.10",
+      "gx:type": "gx:LegalParticipant"
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2025-04-11T13:11:50.453Z",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:compliance.arlabdevelopments.com:v1-staging#X509-JWK2020",
+    "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XVyiR4R2zHSupTDwRaNWiYW95xdgwrtZt4zrWxTSHs5zwSU5N9RT05bW4AkL8FGarfkTd9joEtIc9ktVglrZUQUUtLuioyyKDTU9KKyC1SOCpPuqo8bAIXwDcc4iHIZdFtKxpldbGQEjxOwKqnfmiYSU9ZvvdXt0gFb8pLjFmrDRb5nso0iNaKVAgRKvrdnk7PDxa8DYPwO4j3GEV44RCqwa-Ko_i_afBk-QZBuXb3I4Q04tD_2dF48vqZsfMFMUA_7HaQNP7UppvDYCoHYe9WsZ_m85t8NPv_ALibjuErwQ_gUnxsq3ahHKEjWsTlpILArfRnnZFmId0r2xSPgxvA"
+  }
+}
