@@ -1,0 +1,62 @@
+{
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+    ],
+    "@id": "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+    "type": [
+        "VerifiablePresentation"
+    ],
+    "verifiableCredential": {
+        "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://w3id.org/security/suites/jws-2020/v1"
+        ],
+        "@id": "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",      
+        "type": [
+            "VerifiableCredential"
+            ],
+        "issuer": "https://opengpt-x.de/",
+        "issuanceDate": "2024-10-09T09:00:00.000Z",
+        "credentialSubject": {
+            "@id": "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+            "@type": "gax-trust-framework:ServiceOffering",
+            "gax-core:offeredBy": {"@id": "https://service.opengpt-x.de"},
+            "gax-trust-framework:termsAndConditions": {
+                "gax-trust-framework:content": {
+                    "@value": "https://creativecommons.org/licenses/by/4.0/",
+                    "@type": "xsd:anyURI"
+                },
+                "@type": "gax-trust-framework:TermsAndConditions",
+                "gax-trust-framework:hash": "cadc47290d94f6a998f1957a712e379f"
+            },
+            "gax-trust-framework:policy": "ODRL policy based on licence",
+            "gax-trust-framework:name": "OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+            "gax-trust-framework:dataAccountExport": {
+                "gax-trust-framework:formatType": "application/json",
+                "gax-trust-framework:accessType": "digital",
+                "gax-trust-framework:requestType": "API"
+            },
+            "gax-trust-framework:frontend_url" : "https://service.opengpt-x.de",
+            "gax-trust-framework:backend_url" : "https://api.opengpt-x.de/v2/models/OpenGPT-X-24EU-4T-Instruct-TEUKEN/infer",
+            "dcat:keyword": [
+                "LLM",
+                "OpenGPT-X",
+                "OpenGPT-X-24EU-4T-Instruct-TEUKEN"
+            ],
+            "gax-trust-framework:endpoint": {
+                "@type": "gax-trust-framework:Endpoint",
+                "gax-trust-framework:endpointURL": {
+                    "@value": "https://service.opengpt-x.de",
+                    "@type": "xsd:anyURI"
+                }
+            },
+            "@context": {
+                "gax-trust-framework": "https://w3id.org/gaia-x/gax-trust-framework#",
+                "xsd": "http://www.w3.org/2001/XMLSchema#",
+                "dcat": "http://www.w3.org/ns/dcat#",
+                "gax-core": "https://w3id.org/gaia-x/core#"
+            }
+        }
+    }
+}

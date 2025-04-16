@@ -1,0 +1,64 @@
+{
+  "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+  "@id" : "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+  "type" : [ "VerifiablePresentation" ],
+  "verifiableCredential" : {
+    "@context" : [ "https://www.w3.org/2018/credentials/v1", "https://w3id.org/security/suites/jws-2020/v1" ],
+    "@id" : "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+    "type" : [ "VerifiableCredential" ],
+    "issuer" : "https://opengpt-x.de/",
+    "issuanceDate" : "2024-10-09T09:00:00.000Z",
+    "credentialSubject" : {
+      "@id" : "https://service.opengpt-x.de/OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+      "@type" : "gax-trust-framework:ServiceOffering",
+      "gax-core:offeredBy" : {
+        "@id" : "https://service.opengpt-x.de"
+      },
+      "gax-trust-framework:termsAndConditions" : {
+        "gax-trust-framework:content" : {
+          "@value" : "https://creativecommons.org/licenses/by/4.0/",
+          "@type" : "xsd:anyURI"
+        },
+        "@type" : "gax-trust-framework:TermsAndConditions",
+        "gax-trust-framework:hash" : "cadc47290d94f6a998f1957a712e379f"
+      },
+      "gax-trust-framework:policy" : "ODRL policy based on licence",
+      "gax-trust-framework:name" : "OpenGPT-X-24EU-4T-Instruct-TEUKEN",
+      "gax-trust-framework:dataAccountExport" : {
+        "gax-trust-framework:formatType" : "application/json",
+        "gax-trust-framework:accessType" : "digital",
+        "gax-trust-framework:requestType" : "API"
+      },
+      "gax-trust-framework:frontend_url" : "https://service.opengpt-x.de",
+      "gax-trust-framework:backend_url" : "https://api.opengpt-x.de/v2/models/OpenGPT-X-24EU-4T-Instruct-TEUKEN/infer",
+      "dcat:keyword" : [ "LLM", "OpenGPT-X", "OpenGPT-X-24EU-4T-Instruct-TEUKEN" ],
+      "gax-trust-framework:endpoint" : {
+        "@type" : "gax-trust-framework:Endpoint",
+        "gax-trust-framework:endpointURL" : {
+          "@value" : "https://service.opengpt-x.de",
+          "@type" : "xsd:anyURI"
+        }
+      },
+      "@context" : {
+        "gax-trust-framework" : "https://w3id.org/gaia-x/gax-trust-framework#",
+        "xsd" : "http://www.w3.org/2001/XMLSchema#",
+        "dcat" : "http://www.w3.org/ns/dcat#",
+        "gax-core" : "https://w3id.org/gaia-x/core#"
+      }
+    },
+    "proof" : {
+      "type" : "JsonWebSignature2020",
+      "created" : "2024-10-24T12:10:58Z",
+      "proofPurpose" : "assertionMethod",
+      "verificationMethod" : "did:web:opengpt-x.de",
+      "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..LtVsjBr0V4PctOJ7KA78U5Ugw31YKsyjUcuBnLHcOdLneSddqIz6K4tVgELqf_DNsiMqen0fjjF0WLECfOF90TKJykGk8DDybTpQekSucW9jv8We7LYh5Ej6C29ZhOUzTX9esXo3nU3P25U9EDVWcoLy5u0QvRXnvcTvFQiDIVQrMN7BXhZ16ebbC43RiWsF4dg_3IpZ1KvlHKhZL3hwe4NPdYxewBXEoYtN8jG9abAqwU5msJCn0ywBVMTU-2qg1tBDVChsOXChuRArvhu_rJesDbp-QtdG9fXLni_FZPBRt8eRYuJePo6ygqOnSBpHvfYOlyvAnU9s21pyuAqqZWM8NP3irLHFoMpMyjUhxuCtqMTxyoIp3tvdfWIOT59w0gdIMX8hvNmTPA_xFrIs1Fiqp51wqhHZ7_LLIJEgq7bmmD24w7LcnT0RuZcWhgd8acebVhScvnNAgJkRdXhsBCjYr_Uod9rT7kI3cUaG8AsQ9gjj_G7LCfW4StnDD7ABAZUH0OQQyIKwMaNFtmhEZVvf3Ej2bc3uoCak7H3bK5T1FbIATn2HL-1tk4K6yA0dxNX-MuxgZ8CDN0LUYjSzWz4ofcje0CcjOSh3g5V0AD4_vzxUwzQUVjhbq8jicJNButFfi8_ckhEYTZdUtfxSimt4t35ySCTYxLRJ7X2oIcY"
+    }
+  },
+  "proof" : {
+    "type" : "JsonWebSignature2020",
+    "created" : "2024-10-24T12:10:58Z",
+    "proofPurpose" : "assertionMethod",
+    "verificationMethod" : "did:web:opengpt-x.de",
+    "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJQUzI1NiJ9..D5X3R-ENoenYnQe1AhSyahDEoTCpDBRmES4NTM9kalSt1pxI8o99C7juWXg4wWzOwKweYLJGCAmQxzQzUjiMJXBPuF4lo-0PcMCeSJnfcpq4Fd2hHuA76ysR5b9FVGM2vq8M0NZxqp_lecn2U5g1C_sscUhVqD1PTYpvwZ2kk05qzMbJeWp6Y0UQ62SjtljIXNMlXHxbRB91PD4Nc0SWACmFc7moMvlxRS2JecSB8giRsmGmI2gSrlC86ScK9Il0bSvaPnoYou-1l57bhN_F-YC79u6GIBIrwIbIJ0gCQ1pmSKMDrCDl_Hl9Dzhri3STPIQdDWXRsI_FpJtZ-eUPOt-Q3cEgqQbXeHNLnVLDGCApzJahvAllNT2azYRxClBGOdYY9A-uhDTwhyY1lG-fmEnCuyGtt15OLDd3ZNwVFhXmZvwlmyS095WzAR6qielOJ7d_SX75HLyC7mMJUHPxJRy0dSEGc1qZ3QO-_mPqlMublfkDZxlbSW5KeC017E3YrwmKLRjbPVK5qQARGdyFFJA4KXWwY1gW1aG2ujAMJilwBEpR2kQOjGyGK76h8Ycr_v7PxMzEQxcAr4-_ivERV7JEaktdH49UiXtwZPyAxr5swAHWZ8z2yDEEWLipeGTD6khiVSRTn_WqMJsBraGQkjUAbx2jdx6Gdd1rAHBaWjQ"
+  }
+}

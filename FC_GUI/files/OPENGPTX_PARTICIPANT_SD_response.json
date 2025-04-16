@@ -1,0 +1,11 @@
+{
+  "sdHash": "e01fdb6b039bb3cd4a705a96cc2f66ec3502506a0d19d8e8adf9df0c9df263fa",
+  "id": "https://opengpt-x.de/",
+  "status": "active",
+  "issuer": "https://opengpt-x.de/",
+  "validatorDids": [
+    "did:web:opengpt-x.de"
+  ],
+  "uploadDatetime": "2024-11-18T13:10:36.911340929Z",
+  "statusDatetime": "2024-11-18T13:10:36.911341097Z"
+}
