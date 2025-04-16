@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+  ],
+  "type": "VerifiableCredential",
+  "issuanceDate": "2025-04-11T13:10:40.572Z",
+  "credentialSubject": {
+    "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+    "type": "gx:GaiaXTermsAndConditions",
+    "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
+    "id": "https://arlabdevelopments.com/opengptx/termsAndConditions.json"
+  },
+  "issuer": "did:web:arlabdevelopments.com",
+  "id": "https://arlabdevelopments.com/opengptx/termsAndConditions.json",
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2025-04-11T15:10:40.587+02:00",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:arlabdevelopments.com#X509-JWK2020",
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://w3id.org/security/suites/jws-2020/v1"
+    ],
+    "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..YnVAfqBO_NksKp1Wu7_oBola6K1QaGoZSitfJ1Djgj8RTBJqlsoZsfm3HLN3lqqz3MFL56SbsULsBkMezpQlTcP83gg-cKKaFp-jhWHcfA4NBwJ8jfj5I8MuJGCVWFPq4RFalYPL-ZWs49c86Q-oKxEofHcV-huTQecSHtJ2C5ScGzcSaVTCa5s7UneU6XWvKnHLrNO0B6opNHHhdBDEfWTW2bphK1-XnW_1macTnuTDVRiWForKQHeXJIRaqYYqKHj1rD3A7xHCr5dKVmBUVe_RqtaoPMW9hCxsfe8qNlzQFFZyDuNaWSzfbFB5fK5IqTBw1odb-scipwTMdSNfXA"
+  }
+}
